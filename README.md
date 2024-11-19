@@ -36,7 +36,7 @@ module "github_federation" {
 // Option 1: Direct Workload Identity Federation
 
 module "cloudrun" {
-  source = "ssh://git@github.com:helmless/google-cloudrun-terraform-module.git"
+  source = "ssh://git@github.com:helmless/google-cloudrun-service-terraform-module.git"
   name   = "example-service"
 }
 

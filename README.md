@@ -103,13 +103,13 @@ The following outputs are exported:
 
 Description: The principal set id for the GitHub organization to be used in IAM policies and bindings. Warning: this will grant all repositories in your Github organization the IAM role you bind this to. Use the repository\_principal\_set\_id for more granular control.
 
-### <a name="output_pool_id"></a> [pool\_id](#output\_pool\_id)
+### <a name="output_pool_name"></a> [pool\_name](#output\_pool\_name)
 
-Description: The id of the workload identity pool. Example: projects/1234567890/locations/global/workloadIdentityPools/github
+Description: The name of the workload identity pool. Example: projects/1234567890/locations/global/workloadIdentityPools/github
 
-### <a name="output_provider_id"></a> [provider\_id](#output\_provider\_id)
+### <a name="output_provider_name"></a> [provider\_name](#output\_provider\_name)
 
-Description: The id of the workload identity provider.
+Description: The name of the workload identity provider.
 
 ### <a name="output_repository_principal_set_id_prefix"></a> [repository\_principal\_set\_id\_prefix](#output\_repository\_principal\_set\_id\_prefix)
 

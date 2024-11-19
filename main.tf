@@ -6,10 +6,10 @@ resource "google_iam_workload_identity_pool" "github" {
 }
 
 resource "google_iam_workload_identity_pool_provider" "github" {
-  display_name = var.id
+  display_name = "${var.id}-oidc"
   description  = "Workload Identity Provider for GitHub in ${var.github_organization}"
 
-  workload_identity_pool_id          = google_iam_workload_identity_pool.github.name
+  workload_identity_pool_id          = var.id
   workload_identity_pool_provider_id = "${var.id}-oidc"
 
   attribute_condition = "attribute.repository_owner == \"${var.github_organization}\""
@@ -25,4 +25,8 @@ resource "google_iam_workload_identity_pool_provider" "github" {
   oidc {
     issuer_uri = "https://token.actions.githubusercontent.com"
   }
+
+  depends_on = [
+    google_iam_workload_identity_pool.github
+  ]
 }

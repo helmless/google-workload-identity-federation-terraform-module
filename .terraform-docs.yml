@@ -1,0 +1,28 @@
+formatter: 'markdown document'
+sort:
+  enabled: true
+  by: name
+content: |-
+  {{ .Header }}
+
+  ## Usage
+
+  ```hcl
+  {{ include "example/main.tf" }}
+  ```
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  {{ .Requirements }}
+
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Resources }}
+
+output:
+  file: 'README.md'
+  mode: inject

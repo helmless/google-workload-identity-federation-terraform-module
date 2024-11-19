@@ -1,0 +1,43 @@
+name: 🧪 Tests
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  static-code-analysis:
+    name: 👀 Static Code Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🗂️ Checkout
+        uses: actions/checkout@v4
+
+      - name: 📦 Install Dependencies such as Terraform with asdf
+        uses: asdf-vm/actions/install@v3
+
+      - name: 🚔 Run Static Code Analysis
+        run: |
+          pre-commit run -a
+          terraform init
+          terraform validate
+
+  unit-tests:
+    name: 🧪 Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🗂️ Checkout
+        uses: actions/checkout@v4
+
+      - name: 📦 Install Dependencies such as Terraform with asdf
+        uses: asdf-vm/actions/install@v3
+
+      - name: ⚙️ Init Terraform
+        run: terraform init
+
+      - name: 🧪 Run Unit Tests
+        run: terraform test

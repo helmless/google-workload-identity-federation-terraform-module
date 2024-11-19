@@ -1,0 +1,20 @@
+name: ⚙️ CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yaml
+    secrets: 'inherit'
+    name: 🧪 Tests
+    permissions:
+      contents: read
+      id-token: write

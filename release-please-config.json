@@ -7,6 +7,8 @@
     },
     "extra-files": [
         "example/main.tf",
-        "README.md"
+        "README.md",
+        "repository/README.md",
+        "repository/example/main.tf"
     ]
 }

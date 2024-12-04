@@ -18,6 +18,12 @@ asdf plugin add tflint https://github.com/skyzyx/asdf-tflint
 asdf install
 ```
 
+## `/repository` Sub-Module
+
+You can use the `/repository` sub-module to create a principal set for a specific repository. This is useful if you want to grant access to a specific repository.
+
+See the [`repository/` README](./repository/README.md) for more information.
+
 <!-- BEGIN_TF_DOCS -->
 
 

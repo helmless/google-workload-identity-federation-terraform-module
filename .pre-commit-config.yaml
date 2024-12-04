@@ -10,9 +10,11 @@ repos:
     hooks:
       - id: terraform-docs-system
         args:
-          - -c
-          - .terraform-docs.yml
           - .
+
+      - id: terraform-docs-system
+        args:
+          - repository/
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.90.0

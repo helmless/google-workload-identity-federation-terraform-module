@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/helmless/google-workload-identity-federation-terraform-module/compare/v0.1.0...v0.2.0) (2024-12-04)
+
+
+### Features
+
+* add repository submodule for easy access to principalSet ([42d44ff](https://github.com/helmless/google-workload-identity-federation-terraform-module/commit/42d44ff7005df943247e2e7427aeb9573b15e7cc))
+
 ## 0.1.0 (2024-11-19)
 
 

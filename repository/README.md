@@ -12,7 +12,7 @@ By using this sub module you can easily construct the correct `principalSet` for
 
 ```hcl
 module "workload_identity" {
-  # source = "github.com/helmless/google-workload-identity-federation-terraform-module//repository?ref=v0.1.0" # x-release-please-version
+  # source = "github.com/helmless/google-workload-identity-federation-terraform-module//repository?ref=v0.2.0" # x-release-please-version
   source = "../"
 
   repository = "helmless/helmless"
